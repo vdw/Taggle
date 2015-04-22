@@ -1,5 +1,5 @@
-# Taggle ...is comming soon
+# Taggle
 
-## This is a placeholder for Taggle jQuery plugin.
+## Taggle creates links inside the text from a given tag list.
 
-Taggle creates links inside the text from the a tag list.
+...comming soon, this is a placeholder for Taggle jQuery plugin.
