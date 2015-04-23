@@ -16,12 +16,29 @@
  * -------------------------------------------------------------------------------------------------
  */
 BODY {
-	font-size: 13px; /* Override typography */
+	font-family: 'Droid Serif', serif; /* Override typography */
 }
 
 #wrapper {
 	margin: 0 auto;
 	max-width: 960px;
+}
+
+H1 {
+	margin-top: 2rem;
+}
+
+H1 span {
+	color: #dd2922;
+}
+
+.button {
+	color: #000;
+	border-color: #000;
+}
+
+.link {
+	margin-left: 6px;
 }
 
 /**
@@ -56,10 +73,6 @@ ASIDE {
  * Your content rules
  * -------------------------------------------------------------------------------------------------
  */
-SECTION#body {
-	float: left;
-	width: 100%;
-}
 
 ARTICLE {}
 

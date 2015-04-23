@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Taggle | Creates links inside the text from the a tag list</title>
-	<meta name="description" content="A blank template for building jQuery plugins">
+  <meta charset="utf-8">
+  <title>Taggle | Creates links inside a body text from a tag list</title>
+  <meta name="description" content="A blank template for building jQuery plugins">
 
   <!-- MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
   <script type="text/javascript" src="javascripts/vendor/modernizr.custom.js"></script>
 
   <!-- STYLES -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/vendor/normalize.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/vendor/skeleton.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
@@ -20,41 +20,123 @@
 
   <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Taggle jQuery plugin" />
   <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
-  <meta prefix="og: http://ogp.me/ns#" property="og:image" content="http://vdw.github.io/Taggle/images/tabslet_logo_single_color_150.png" />
   <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://vdw.github.io/Taggle/" />
 
-	<script type="text/javascript">
-	  // var _gaq = _gaq || [];
-	  // _gaq.push(['_setAccount', 'XX-XXXXXXX-XX']);
-	  // _gaq.push(['_trackPageview']);
+  <script type="text/javascript">
+    // var _gaq = _gaq || [];
+    // _gaq.push(['_setAccount', 'XX-XXXXXXX-XX']);
+    // _gaq.push(['_trackPageview']);
 
-	  // (function() {
-	  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  // })();
-	</script>
+    // (function() {
+    //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    // })();
+  </script>
 </head>
 
 <body>
-  <img src="images/tabslet_logo_single_color_150.png" class="screenshot">
-  <a href="https://github.com/vdw/Tabslet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+  <a href="https://github.com/vdw/Taggle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns taggle-1">
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h1>Tag<span>g</span>le</h1>
+          <h3>Creates links inside a body text based on a tag list</h3>
+          <a class="button" href="https://github.com/vdw/Taggle/archive/master.zip">download <small>v0.1.0</small></a>
+          <a class="link" href="https://github.com/vdw/Taggle">or view on GitHub</a>
+        </div>
       </div>
     </div>
-     <div class="row">
-      <div class="twelve columns">
-        <span>architecto</span>
-        <span>voluptatem</span>
-        <span>incidunt</span>
-        <span>dolorem</span>
+  </header>
+
+  <hr />
+
+  <section id="body" role="main">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns taggle" data-tag-list=".taglist">
+          <h5>Demostration <small>(body text)</small></h5>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+      </div>
+       <div class="row">
+        <div class="twelve columns taglist">
+          Tags <small>(tag list)</small>:
+          <a href="#"><span>architecto</span></a>
+          <a href="#test"><span>voluptatem</span></a>
+          <a href="#"><span>incidunt</span></a>
+          <a href="#"><span>dolorem</span></a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <hr />
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns taggle" data-tag-list=".taglist">
+          <h5>Usage</h5>
+          <p>
+            Include jQuery at your document's footer
+<pre data-language="general">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</pre>
+          </p>
+          <p>
+            Include Taggle
+<pre data-language="general">
+<script src="jquery.taggle.min.js"></script>
+</pre>
+          </p>
+          <p>
+            Create the following html structure
+<pre data-language="general">
+<article class="my-article" data-tag-list=".my-tag-list">
+  <!-- blah blah -->
+</article>
+
+<div class="my-tag-list">
+  <a href="#"><span>tag 1</span></a>
+  <a href="#"><span>tag 2</span></a>
+  <a href="#"><span>tag 3</span></a>
+  <a href="#"><span>tag 4</span></a>
+</div>
+</pre>
+          </p>
+          <p>
+            Initialize Taggle using the following two ways
+
+<pre data-language="javascript">
+// Default way
+$(document).ready(function() {
+  $('.my-article').taggle();
+});
+</pre>
+<pre data-language="general">
+<!-- Using a data attribute -->
+<article data-toggle="taggle">
+  <!-- blah blah -->
+</article>
+</pre>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          Built by <a href="https://github.com/vdw">vdw</a> aka <a href="http://gr.linkedin.com/in/dkrestos/" target="_blank">Dimitris Krestos</a><br />Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

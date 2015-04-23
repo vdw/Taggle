@@ -1,37 +1,58 @@
 /**
  * Taggle
  *
- * @copyright	Copyright 2015, Dimitris Krestos
- * @license		Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php)
- * @link			http://vdw.staytuned.gr
- * @version		v0.0.1
+ * @copyright Copyright 2015, Dimitris Krestos
+ * @license   Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php)
+ * @link      http://vdw.staytuned.gr
+ * @version   v0.0.1
  */
 
-	/* Sample html structure
+  /* Sample html structure
 
-	<div class='selector'></div>
+  <article class="my-article" data-tag-list=".my-tag-list">
+    <!-- blah blah -->
+  </article>
 
-	*/
+  <div class="my-tag-list">
+    <a href="#"><span>tag 1</span></a>
+    <a href="#"><span>tag 2</span></a>
+    <a href="#"><span>tag 3</span></a>
+    <a href="#"><span>tag 4</span></a>
+  </div>
+
+  */
 
 ;(function($, window, undefined) {
-	"use strict";
+  "use strict";
 
-	$.fn.taggle = function(options) {
+  $.fn.taggle = function(options) {
 
-		var defaults = {};
+    var defaults = {
+      linkclass: ''
+    };
 
-		var options = $.extend(defaults, options);
+    var options = $.extend(defaults, options);
 
-		$(this).each(function() {
+    return this.each(function() {
 
-			var $this = $(this);
+      var $this = $(this);
+      var $tags = $($this.data('tag-list')).children('a');
 
-			$this.html($this.html().replace('architecto', '<a href="#">architecto</a>'));
+      // Ungly overwrite
+      options.linkclass = $this.data('linkclass') || options.linkclass;
 
-		});
+      $tags.each(function() {
 
-	};
+        var pattern = new RegExp('\\s' + $(this).text() + '\\s', 'gi');
 
-	$(document).ready(function () { $('[data-toggle="taggle"]').taggle(); });
+        $this.html($this.html().replace(pattern, ' <a class="' + options.linkclass + '" href="' + $(this).attr('href') + '">' + $(this).text() + '</a> '));
+
+      });
+
+    });
+
+  };
+
+  $(document).ready(function () { $('[data-toggle="taggle"]').taggle(); });
 
 })(jQuery);

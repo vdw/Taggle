@@ -1,5 +1,5 @@
 # Taggle
 
-## Taggle creates links inside the text from a given tag list.
+## Taggle creates links inside a body text based on a tag list.
 
-...comming soon, this is a placeholder for Taggle jQuery plugin.
+...comming soon.

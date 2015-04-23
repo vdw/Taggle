@@ -1,7 +1,7 @@
 {
 	"name": "Taggle",
 	"title": "jQuery Taggle",
-	"description": "Creates links inside the text from the a tag list.",
+	"description": "Creates links inside a body text based on a tag list.",
 	"keywords": [
 		"jquery",
 		"plugins"
